@@ -241,7 +241,7 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #ff0eff 0%, #02d9ff 100%);
 }
 
 .text-color {
@@ -279,11 +279,20 @@ nav {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 7px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-header .nav-transparent {
+/*header .nav-transparent {
     background-color: transparent !important;
     background-image: none;
     box-shadow: none;
 }
+↑原本↓修改后
+*/
+
+header .nav-transparent {
+    /* background-color: transparent !important;*/
+   background-color: #000B3F;
+     background-image: none;
+     box-shadow: none;
+ }
 
 header nav .brand-span {
     font-size: 1.45rem;
@@ -550,10 +559,12 @@ header .go-back i {
     height: 40vh !important;
 }
 
-.bg-cover:after {
+/*.bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
 }
+↑蒙版特效
+*/
 
 .bg-cover:before,
 .bg-cover:after {
