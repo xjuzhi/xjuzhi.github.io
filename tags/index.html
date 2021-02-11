@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, xjuzhi">
+    <meta name="keywords" content="tgas, xjuzhi">
     <meta name="description" content="这里是发挥想象和创造的地方">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签 | 小橘子的窝</title>
+    <title>tgas | 小橘子的窝</title>
     <link rel="icon" type="image/png" href="/favicon%E5%9C%86%E5%BD%A2.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -32,6 +32,8 @@
 <meta name="generator" content="Hexo 5.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 </head>
+
+
 
 
 
@@ -132,6 +134,17 @@
   
   <li class="hide-on-med-and-down nav-item">
     
+    <a href="/404" class="waves-effect waves-light">
+      
+      <i class="fas fa-heartbeat" style="zoom: 0.6;"></i>
+      
+      <span>公益</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
     <a href="" class="waves-effect waves-light">
 
       
@@ -174,7 +187,7 @@
           
           <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>照片</span>
+          <span>相册</span>
         </a>
       </li>
       
@@ -287,6 +300,17 @@
         
         <li class="m-nav-item">
 	  
+		<a href="/404" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-heartbeat"></i>
+			
+			公益
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
 		<a href="javascript:;">
 			
 				<i class="fa-fw fas fa-list"></i>
@@ -332,7 +356,7 @@
 				  
 				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
 			      
-		          <span>照片</span>
+		          <span>相册</span>
                   </a>
                 </li>
               
@@ -422,9 +446,9 @@
         <div class="brand">
             <div class="title center-align">
                 
-                小橘子的窝
+                       小橘子的窝
                 
-            </div>
+           </div>
 
             <div class="description center-align">
                 
@@ -448,9 +472,9 @@
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    //二次元接口韩小韩API，CSDN地址：https://blog.csdn.net/qq_42951560/article/details/111629218?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522161287585016780255294056%252522%25252C%252522scm%252522%25253A%25252220140713.130102334..%252522%25257D&request_id=161287585016780255294056&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-2-111629218.first_rank_v2_pc_rank_v29&utm_term=%25E4%25BA%258C%25E6%25AC%25A1%25E5%2585%2583%25E5%259B%25BE%25E7%2589%2587%25E6%258E%25A5%25E5%258F%25A3
+    $('.bg-cover').css('background-image', 'url(https://api.vvhan.com/api/acgimg)');
+    //$('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
 </script>
 
 
@@ -470,10 +494,28 @@
             <div class="tag-chips">
                 
                 
+                <a href="/tags/%E6%96%87%E7%AB%A0/" title="文章: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="文章" style="background-color: #F9EBEA;">文章
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%B5%8B%E8%AF%95/" title="测试: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="测试" style="background-color: #F5EEF8;">测试
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/about/" title="about: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="about" style="background-color: #F9EBEA;">about
+                            data-tagname="about" style="background-color: #D5F5E3;">about
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -502,7 +544,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"about","weight":1,"link":"/tags/about/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"文章","weight":1,"link":"/tags/文章/"},{"text":"测试","weight":1,"link":"/tags/测试/"},{"text":"about","weight":1,"link":"/tags/about/"}], {
         autoResize: true
     });
 </script>
@@ -570,6 +612,9 @@
             |&nbsp;技术支持:&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;主题:&nbsp;<a href="https://xjuzhi.github.io" target="_blank">基于Matery主题修改</a>
             <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">253</span>&nbsp;字
             
             
             
@@ -640,6 +685,7 @@
     <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fas fa-rss"></i>
     </a>
+
 
 </div>
     </div>
@@ -798,6 +844,11 @@ $(function () {
 
 	
     
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='1'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
 
     
 
@@ -809,7 +860,11 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+
+
 
 <div id="weather-v2-plugin-simple"></div>
 <script>
@@ -847,4 +902,11 @@ WIDGET = {
 
 <script src="/js/FunnyTitle.js"></script>
 
+<!--动态线条背景-->
+<!--
+<script type="text/javascript"
+color="0 245 255" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
 </html>
+-->

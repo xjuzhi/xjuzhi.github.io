@@ -1907,7 +1907,7 @@ footer .copy-right {
     display: none;
     position: fixed;
     right: 15px;
-    bottom: 15px;
+    bottom: 200px;
     padding-top: 15px;
     margin-bottom: 0;
     z-index: 998;
@@ -2148,4 +2148,19 @@ footer .copy-right {
     height: 50px;
     padding: 0;
     margin: 0;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar-thumb {
+    background-color: #edfd0d;
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+    border-radius: 3em;
+}
+::-webkit-scrollbar-track {
+    background-color: #02d9ff;
+    border-radius: 3em;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 15px;
 }
