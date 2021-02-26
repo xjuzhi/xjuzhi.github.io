@@ -242,6 +242,7 @@ mark {
 
 .bg-color {
     background-image: linear-gradient(to right, #ff0eff 0%, #02d9ff 100%);
+    opacity: 0.8  /* 标题栏透明效果 */
 }
 
 .text-color {
@@ -251,13 +252,13 @@ mark {
 .white-color {
     color: #fff;
 }
-
+/* 进度条 */
 .progress-bar {
     height: 4px;
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right,  #ff0eff 0%, #02d9ff 100%);
     opacity: 0.8;
 }
 
@@ -285,13 +286,15 @@ nav {
     box-shadow: none;
 }
 ↑原本↓修改后
+
 */
 
 header .nav-transparent {
     /* background-color: transparent !important;*/
-   background-color: #000B3F;
+   background-color: #00ccff;
      background-image: none;
      box-shadow: none;
+     opacity:0.8; /* 导航栏透明度 */
  }
 
 header nav .brand-span {
@@ -2152,7 +2155,7 @@ footer .copy-right {
 
 /* 滚动条 */
 ::-webkit-scrollbar-thumb {
-    background-color: #edfd0d;
+    background-color: #ebfc00;
     background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
     border-radius: 3em;
 }
@@ -2164,3 +2167,137 @@ footer .copy-right {
     width: 8px;
     height: 15px;
 }
+/* 每日一言CSS */
+  /* 增加每日一言模块 */
+.poem-wrap {
+    position: relative;
+    width: 730px;
+    max-width: 80%;
+    border: 2px solid #797979;
+    border-top: 0;
+    text-align: center;
+    margin: 80px auto;
+}
+.poem-left {
+    left: 0;
+}
+.poem-border {
+    position: absolute;
+    height: 2px;
+    width: 27%;
+    background-color: #797979;
+}
+.poem-right {
+    right: 0;
+}
+.poem-wrap h1 {
+    position: relative;
+    margin-top: -20px;
+    display: inline-block;
+    letter-spacing: 4px;
+    color: #797979;
+}
+.poem-wrap p:nth-of-type(1) {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+.poem-wrap p {
+    width: 70%;
+    margin: auto;
+    line-height: 30px;
+    color: #797979;
+    font-family: "Linux Biolinum", "Noto Serif SC", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+}
+.poem-wrap p:nth-of-type(2) {
+    font-size: 18px;
+    margin: 15px auto;
+}
+.bozhushuo {
+    text-align: center;
+    font-size: 19px!important;
+    margin: 0 0 12px!important;
+    line-height: 1.9rem;
+    font-family: "Linux Biolinum", "Noto Serif SC", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+}
+.notice {
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px dashed #e6e6e6;
+    color: #969696;
+    position: relative;
+    display: inline-block;
+    width: 95%;
+    background: #fbfbfb50;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.notice-content {
+    display: initial;
+    vertical-align: middle;
+}
+/* note标签美化 */
+    /* note 公共样式 */
+    .note {
+        position: relative;
+        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: initial;
+        border-left: 3px solid #eee;
+        background-color: #f9f9f9;
+        border-radius: 3px;
+        font-size: var(--content-font-size);
+    }
+
+    .note:not(.no-icon):before {
+        position: absolute;
+        font-family: FontAwesome;
+        font-size: larger;
+        top: 11px;
+        left: 15px;
+    }
+
+    .note:not(.no-icon) {
+        padding-left: 45px;
+    }
+
+    .note.info {
+        background-color: #eef7fa;
+        border-left-color: #428bca;
+    }
+
+    .note.info:not(.no-icon):before {
+        content: "\f05a";
+        color: #428bca;
+    }
+
+    .note.warning {
+        background-color: #fdf8ea;
+        border-left-color: #f0ad4e;
+    }
+
+    .note.warning:not(.no-icon):before {
+        content: "\f06a";
+        color: #f0ad4e;
+    }
+
+    .note.primary {
+        background-color: #f5f0fa;
+        border-left-color: #6f42c1;
+    }
+
+    .note.primary:not(.no-icon):before {
+        content: "\f055";
+        color: #6f42c1;
+    }
+
+    .note.danger {
+        background-color: #fcf1f2;
+        border-left-color: #d9534f;
+    }
+
+    .note.danger:not(.no-icon):before {
+        content: "\f056";
+        color: #d9534f;
+    }
