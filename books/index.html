@@ -574,361 +574,1362 @@
     </div>
 </div>
 <style>
-    /* 小花花背景图开始 */
-    body.dark .swbk, body.dark .triangle, body.dark .v[data-class=v] .vwrap {
-        background: rgba(34,34,34,0.55)!important;
+    .friends-container {
+        margin-top: -100px;
+        margin-bottom: 30px;
     }
-    .v[data-class=v] .vwrap {
-        background-color: #fff;
-    }
-    .card
-    {
-        background: url(/medias/banner/flowerbg-white.png) top ;
-    }
-    body.dark .card
-    {
-        background: url(/medias/banner/flowerbg-black.png) top;
-    }
-    /* 小花花背景图结束 */
-    #switchspring {
-        bottom: 223px;
-    }
-    #switchchristmas {
-        bottom: 278px!important;
-    }
-    @media only screen and (max-width: 601px) {
-        #switchchristmas {
-            bottom: 235px!important;
-        }
-    }
-    .card-content {
-        padding: 12px!important;
-    }
-    .miaoshus {
-        padding: 12px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 95%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-        font-size: 16px;
-        margin: 3px auto 0px;
-    }
-    body.dark .miaoshus {
-        background: 0 0;
-        border: 1px dashed #888;
-    }
-</style>
-<!-- 以下书单模块css样式 -->
-<style>
-    body.dark .page .content li {
-        background: rgba(34,34,34,0.55)!important;
-        border-radius: 12px;
-    }
-    @media screen and (min-width: 768px) {
-        #book .page {
-        /* background-color: hsla(0,0%,100%,.7); */
-        -webkit-box-shadow: 0 8px 16px rgba(0,0,0,.12);
-        box-shadow: 0 8px 16px rgba(0,0,0,.12);
-        }
-    }
-    #book .page {
-        overflow: hidden;
-        border-radius: 3px;
-    }
-    @media screen and (min-width: 768px) {
-        #book .content {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-    #book .content {
-        display: grid;
-        grid-column-gap: 16px;
-        padding: 16px;
-        text-align: justify;
-    }
-    #book .content li {
-        list-style: none;
-        margin-bottom: 16px;
-        border-radius: 3px;
-        background-color: hsla(0,0%,100%,.7);
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        -webkit-transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-    }
-    #book .content li .info {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        padding: 16px 12px 0;
-        line-height: 1.7;
-        list-style: none;
-    }
-    .book-container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-perspective: 600px;
-        perspective: 600px;
-    }
-    .book {
-        position: relative;
-        width: 100px;
-        height: 150px;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        -webkit-transform: rotateY(-30deg);
-        transform: rotateY(-30deg);
-        -webkit-transition: 1s ease;
-        transition: 1s ease;
-        -webkit-animation: bookRotate 0s 1s ease 0s;
-        animation: bookRotate 0s 1s ease 0s;
-        list-style: none;
-    }
-    .book:before {
-        content: " ";
-        position: absolute;
-        left: 0;
-        top: 2px;
-        width: 23px;
-        height: 146px;
-        -webkit-transform: translateX(84.5px) rotateY(90deg);
-        transform: translateX(84.5px) rotateY(90deg);
-        background: -webkit-gradient(linear,left top,right top,from(#fff),color-stop(5%,#f9f9f9),color-stop(10%,#fff),color-stop(15%,#f9f9f9),color-stop(20%,#fff),color-stop(25%,#f9f9f9),color-stop(30%,#fff),color-stop(35%,#f9f9f9),color-stop(40%,#fff),color-stop(45%,#f9f9f9),color-stop(50%,#fff),color-stop(55%,#f9f9f9),color-stop(60%,#fff),color-stop(65%,#f9f9f9),color-stop(70%,#fff),color-stop(75%,#f9f9f9),color-stop(80%,#fff),color-stop(85%,#f9f9f9),color-stop(90%,#fff),color-stop(95%,#f9f9f9),to(#fff));
-        background: linear-gradient(90deg,#fff,#f9f9f9 5%,#fff 10%,#f9f9f9 15%,#fff 20%,#f9f9f9 25%,#fff 30%,#f9f9f9 35%,#fff 40%,#f9f9f9 45%,#fff 50%,#f9f9f9 55%,#fff 60%,#f9f9f9 65%,#fff 70%,#f9f9f9 75%,#fff 80%,#f9f9f9 85%,#fff 90%,#f9f9f9 95%,#fff);
-    }
-    .book>:first-child {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 150px;
-        -webkit-transform: translateZ(12.5px);
-        transform: translateZ(12.5px);
-        border-radius: 0 2px 2px 0;
-        -webkit-box-shadow: 5px 5px 20px #666;
-        box-shadow: 5px 5px 20px #666;
-    }
-    .book:after {
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 150px;
-        -webkit-transform: translateZ(-12.5px);
-        transform: translateZ(-12.5px);
-        background-color: #555;
-        border-radius: 0 2px 2px 0;
-    }
-    #book .content li .info>div {
-        margin-left: 26px;
-    }
-    #book .content li .info h3 {
-        font-size: 16px;
-    }
-    #book .content li .info p a {
-        position: relative;
-        color: #b854d4;
-    }
-    #book .content li .info p a:before {
-        content: " " attr(href);
-        position: absolute;
-        padding: 0 4px;
-        width: -webkit-max-content;
-        width: -moz-max-content;
-        width: max-content;
-        pointer-events: none;
-        font-family: Fontello;
-        font-size: 12px;
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        border-radius: 3px;
-        background-color: #fff;
-        opacity: 0;
-        -webkit-transform: scale(.7) translateY(-75%);
-        transform: scale(.7) translateY(-75%);
-        -webkit-transform-origin: left center;
-        transform-origin: left center;
-        -webkit-transition: all .3s ease 0s;
-        transition: all .3s ease 0s;
-    }
-    #book .content li .info p a:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1.5px;
-        background-color: #b854d4;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transform-origin: bottom right;
-        transform-origin: bottom right;
-        -webkit-transition: -webkit-transform .3s ease-out;
-        transition: -webkit-transform .3s ease-out;
-        transition: transform .3s ease-out;
-        transition: transform .3s ease-out,-webkit-transform .3s ease-out;
-    }
-    #book .content li .info .fa-star {
-        margin-right: 4px;
-        color: #d68fe9;
-    }
-    .icon-star:before {
-        content: "\e80b";
-    }
-    [class*=" icon-"]:before, [class^=icon-]:before {
-        font-family: Fontello;
-        font-style: normal;
-        font-weight: 400;
-        display: inline-block;
-        text-decoration: inherit;
-        width: 1em;
-        text-align: center;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1em;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    #book .content li .description {
-        padding: 12px;
-        font-size: 14px;
-        line-height: 1.7;
-    }
-    #book .content li .info p {
-        font-size: 14px;
-        line-height: 1.7;
 
+    .friends-container .tag-title {
+        margin-bottom: 10px;
+        color: #3C4858;
+        font-size: 1.75rem;
+        font-weight: 400;
     }
-    @media screen and (min-width: 768px) {
-        #book .content li:hover {
-            -webkit-transform: translateY(-4px);
-            transform: translateY(-4px);
-            -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.14), 0 3px 8px rgba(0,0,0,.12);
-            box-shadow: 0 14px 38px rgba(0,0,0,.14), 0 3px 8px rgba(0,0,0,.12);
+
+    .frind-ship img {
+        border-radius: 15px;
+    }
+
+    /* 一下是按钮样式 */
+
+    .frind-ship {
+        padding: 10px 20px;
+    }
+
+    .frind-ship .title {
+        display: flex;
+        align-items: center;
+    }
+
+    .frind-ship .title div {
+        color: #fff;
+        padding-left: 10px;
+    }
+
+    .frind-ship .title img {
+	width: 100px;
+	height: 150px;
+	flex-shrink: 0;
+    }
+
+    .frind-ship .title h2 {
+        padding-bottom: 5px;
+        border-bottom: 2px solid #fff;
+        position: relative;
+        top:-15px;
+        left: 3px;
+    }
+
+    .frind-ship .title h3 {
+        margin-top: -5px;
+        padding-bottom: 2px;
+        border-bottom: 2px solid #fff;
+        position: relative;
+        top: -15px;
+        left: 3px;
+    }
+    
+    .frind-ship .title h5 {
+        margin-top: -5px;
+        padding-bottom: 5px;
+        position: relative;
+        top: -15px;
+        left: 3px;
+    }
+
+    .friend-button {
+        display: flex;
+        justify-content: center;
+        margin-bottom: -27px;
+    }
+
+    .friend-button a {
+        border-radius: 40px;
+    }
+
+    .friend-all .tag-post {
+        margin-bottom: 30px;
+    }
+
+    .button-caution {
+        background-color: #FF4351;
+        border-color: #FF4351;
+        color: #FFF;
+    }
+
+    .button {
+        font-weight: 300;
+        font-size: 16px;
+        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        text-decoration: none;
+        text-align: center;
+        line-height: 40px;
+        height: 40px;
+        padding: 0 40px;
+        margin: 0;
+        display: inline-block;
+        appearance: none;
+        cursor: pointer;
+        border: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+    }
+
+    .title {
+        margin-bottom: 0rem !important;
+    }
+
+    .card {
+        margin: 3rem 0 1rem 0 !important;
+    }
+
+    .button-glow.button-caution {
+        -webkit-animation-name: glowing-caution;
+        animation-name: glowing-caution;
+    }
+
+    @-webkit-keyframes glowing-caution {
+        from {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+        }
+
+        50% {
+            -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+            box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+        }
+
+        to {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
         }
     }
-    #book .content li {
-        list-style: none;
-        margin-bottom: 16px;
-        border-radius: 3px;
-        background-color: hsla(0,0%,100%,.7);
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        -webkit-transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
+
+    @keyframes glowing-caution {
+        from {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+        }
+
+        50% {
+            -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+            box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+        }
+
+        to {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+        }
     }
-    #book .content li:hover .book {
-        -webkit-transform: rotateY(0deg);
-        transform: rotateY(0deg);
+
+    .button-caution:hover {
+        background-color: #ff7680;
+        border-color: #ff7680;
+        color: #FFF;
+        text-decoration: none;
     }
-    .quote {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        position: relative;
-        margin-bottom: 16px;
-        padding: 32px 0;
+
+    .frind-card1 {
+        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
     }
-    .quote i:first-child {
-        top: 0;
-        left: 16px;
+
+    .frind-card2 {
+        background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
-    .quote i {
-        position: absolute;
-        font-size: 24px;
+
+    .frind-card3 {
+        background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
     }
-    .icon-quote-left:before {
-        content: "\f10d";
+
+    .frind-card4 {
+        background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
     }
-    [class*=" icon-"]:before, [class^=icon-]:before {
-        font-family: Fontello;
-        font-style: normal;
-        font-weight: 400;
-        display: inline-block;
-        text-decoration: inherit;
-        width: 1em;
-        text-align: center;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1em;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+
+    .frind-card5 {
+        background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+    }
+
+    .frind-card6 {
+        background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    }
+
+    .frind-card7 {
+        background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    }
+
+    .frind-card8 {
+        background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+    }
+
+    .frind-card9 {
+        background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+    }
+
+    .frind-card10 {
+        background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    }
+
+    article .card {
+        overflow: visible !important;
     }
 </style>
+
 <main class="content">
-    <div class="container">
-        
+    <div class="container friends-container">
+        <div class="card">
             <div class="card-content">
                 <div class="tag-title center-align">
-                    <div class="miaoshus">
-                        <div class="title center-align">“ 书单 没有比阅读更有益的事了，如果有，就两本~ ”</div>
-                        “ 盛夏之夜，随手举起放在桌旁的地球仪，指着伦敦说：这里有个举世闻名的格林威治天文台，世界时间就从这里开始。时间？时间在哪儿？ ”
-                    </div>
-
-<!-- 书单模块开始 -->
-<div id="book">
-<div class="page">
-<ul class="content">
-    <!-- 每个li标签内容代表一本书籍的所有信息 -->
-    <li>
-        <div class="info">
-            <a href="https://www.duokan.com/book/169714" target="_blank" rel="noreferrer noopener" class="book-container">
-                <div class="book">
-                    <img src="https://cdn.jsdelivr.net/gh/chanshiyucx/yoi@latest/book/ES6-标准入门.jpg" alt="ES6 标准入门">
+                    <i class="fas fa-address-book"></i>&nbsp;&nbsp;图书
                 </div>
-            </a>
-            <div>
-                <h3>《 ES6 标准入门 》</h3>
-                <p>作者：阮一峰</p>
-                <p>出版时间：2017-09-01</p>
-                <p>阅读进度：正在阅读...</p>
-                <p>
-                    <span>读书笔记：</span>
-                    <a href="/posts/note-demo.html" target="_blank" rel="noopener noreferrer"> ES6 标准入门 </a>
-                </p>
-                <p> 
-                    <span>推荐指数：</span>
-                    <span></span>
-                    <!-- 推荐指数，多少个星星就有以下多少个i标签 -->
-                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                </p>
+                <article id="friends-link">
+                    
+                    
+                    <div class="row tags-posts friend-all">
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card1">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1011126016/180" alt="img">
+                                        <div>
+                                            <h2>超级母舰</h2>
+                                            <h3>男频/科幻</h3>
+                                            <h3>（未完结）单男主</h3>
+                                            <h5>更新部分已看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1011126016" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card2">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1887208/180" alt="img">
+                                        <div>
+                                            <h2>全职高手</h2>
+                                            <h3>男频/网游</h3>
+                                            <h3>（完结）单男主</h3>
+                                            <h5>看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1887208" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card3">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1018407408/180" alt="img">
+                                        <div>
+                                            <h2>开局签到一个首富姐姐</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（未完结）单男主</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1018407408" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card4">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1010961566/180" alt="img">
+                                        <div>
+                                            <h2>万能数据</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（完结）单男主</h3>
+                                            <h5>看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1010961566" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card5">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/3623463/180" alt="img">
+                                        <div>
+                                            <h2>重生之2006</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（完结）单男主</h3>
+                                            <h5>看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/3623463" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card6">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1018114089/180" alt="img">
+                                        <div>
+                                            <h2>从当爷爷开始</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（未完结）单男主</h3>
+                                            <h5>看完已更新部分</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1018114089" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card7">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1021600985/180" alt="img">
+                                        <div>
+                                            <h2>从冒牌大学开始</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（未完结）单男主</h3>
+                                            <h5>看完已更新部分</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1021600985" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card8">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="http://wfqqreader-1252317822.image.myqcloud.com/cover/974/24171974/t5_24171974.jpg" alt="img">
+                                        <div>
+                                            <h2>魔尊也要当奶爸</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（完结）单男主</h3>
+                                            <h5>看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="http://chuangshi.qq.com/bk/ds/24171974.html?sword=%E9%AD%94%E5%B0%8A%E4%B9%9F%E8%A6%81%E5%BD%93%E5%A5%B6%E7%88%B8" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card9">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1020143980/180" alt="img">
+                                        <div>
+                                            <h2>开局签到就是首富之子</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（完结）单男主</h3>
+                                            <h5>看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1020143980" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card10">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1020087111/180" alt="img">
+                                        <div>
+                                            <h2>开局签到首富未婚妻</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（完结）单男主</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1020087111" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card1">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1022102956/180" alt="img">
+                                        <div>
+                                            <h2>开局从相亲开始</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（未完结）单男主</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1022102956" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card2">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1017300966/180" alt="img">
+                                        <div>
+                                            <h2>我不想长生不死啊</h2>
+                                            <h3>男频/历史</h3>
+                                            <h3>（为完结）单男主</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1017300966" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card3">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1022534021/180" alt="img">
+                                        <div>
+                                            <h2>开局成为三流校长</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（完结）单男主</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1022534021" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card4">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1022914978/180" alt="img">
+                                        <div>
+                                            <h2>被大家当成渣男怎么办</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（完结）单男主</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1022914978" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card5">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1017952484/180" alt="img">
+                                        <div>
+                                            <h2>前任男神</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（未完结）单男主</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1017952484" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card6">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1009537208/180" alt="img">
+                                        <div>
+                                            <h2>神豪无极限</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（完结）后宫文</h3>
+                                            <h5>看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1009537208" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card7">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1022192787/180" alt="img">
+                                        <div>
+                                            <h2>我姐姐实在太宠我了</h2>
+                                            <h3>男频/历史</h3>
+                                            <h3>（未完结）后宫文</h3>
+                                            <h5>更新不封看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1022192787" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card8">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1016468852/180" alt="img">
+                                        <div>
+                                            <h2>老婆比我先重生了</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（完结）狗粮文必看</h3>
+                                            <h5>看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1016468852" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card9">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1024234770/180" alt="img">
+                                        <div>
+                                            <h2>开局绑架了隋炀帝</h2>
+                                            <h3>男频/历史</h3>
+                                            <h3>（未完结）个人推荐历史文</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1024234770" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card10">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1023029576/180" alt="img">
+                                        <div>
+                                            <h2>我老婆是女学霸</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（未完结）推荐狗粮文</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1023029576" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card1">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1023867124/180" alt="img">
+                                        <div>
+                                            <h2>我家老婆来自一千年前</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（未完结）推荐+1</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1023867124" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card2">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1023822776/180" alt="img">
+                                        <div>
+                                            <h2>开局被长乐公主绑架</h2>
+                                            <h3>男频/历史</h3>
+                                            <h3>（未完结）单男主</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1023822776" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card3">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1015009656/180" alt="img">
+                                        <div>
+                                            <h2>我娘子天下第一</h2>
+                                            <h3>男频/历史</h3>
+                                            <h3>（未完结）后宫文</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1015009656" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card4">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1025266206/180" alt="img">
+                                        <div>
+                                            <h2>放开那个女学霸</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（未完结）狗粮文</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1025266206" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card5">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1024109443/180" alt="img">
+                                        <div>
+                                            <h2>我捡了个末世少女</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>(未完结)狗粮文</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1024109443" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card6">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1025003832/180" alt="img">
+                                        <div>
+                                            <h2>我女友自带欧气</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（未完结）推荐+1</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1025003832" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card7">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1024067700/180" alt="img">
+                                        <div>
+                                            <h2>神豪从绑定老婆开始</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（未完结）推荐+1</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1024067700" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card8">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1020654080/180" alt="img">
+                                        <div>
+                                            <h2>我真不想读档</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（未完结）后宫文必读+1</h3>
+                                            <h5>更新部分看完(2021.3.15)</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1020654080" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card9">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1019263100/180" alt="img">
+                                        <div>
+                                            <h2>老婆请安分</h2>
+                                            <h3>男频/轻小说</h3>
+                                            <h3>（完结）狗粮文必看+1</h3>
+                                            <h5>看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1019263100" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card10">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="/medias/chongshengzuiqiangnongmin.jpg" alt="img">
+                                        <div>
+                                            <h2>重生最强农民</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（完结）有后宫</h3>
+                                            <h5>看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="http://dushu.baidu.com/pc/detail?gid=4315654150" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card1">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="/medias/wunaidahuangdi.jpg" alt="img">
+                                        <div>
+                                            <h2>吾乃大皇帝</h2>
+                                            <h3>男频/历史</h3>
+                                            <h3>（未完结）单男主</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="http://dushu.baidu.com/pc/detail?gid=4316622593" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card2">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1015057768/180" alt="img">
+                                        <div>
+                                            <h2>我只想安静的打游戏</h2>
+                                            <h3>男频/玄幻</h3>
+                                            <h3>（未完结）单男主</h3>
+                                            <h5>更新部分看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://book.qidian.com/info/1015057768" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card3">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="/medias/niyoubatianliaosile.jpg" alt="img">
+                                        <div>
+                                            <h2>你又把天聊死了</h2>
+                                            <h3>男频/都市</h3>
+                                            <h3>（未完结）狗粮文推荐+1</h3>
+                                            <h5>看完</h5>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="http://dushu.baidu.com/pc/detail?gid=4308331873" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前去阅读
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </article>
             </div>
-            </div>
-            <p class="description">“ 柏林已经来了命令，阿尔萨斯和洛林的学校只许教 ES6 了...他转身朝着黑板，拿起一支粉笔，使出全身的力量，写了两个大字：“ES6 万岁！”《最后一课》。 ”</p>
-    </li>
-    <!-- 每个li标签内容代表一本书籍的所有信息 -->
-    <li><div class="info"><a href="https://www.duokan.com/book/120447" target="_blank" rel="noreferrer noopener" class="book-container"><div class="book"><img src="https://cdn.jsdelivr.net/gh/chanshiyucx/yoi@latest/book/JavaScript-设计模式与开发实践.jpg" alt="JavaScript 设计模式与开发实践"></div></a><div><h3>《 JavaScript 设计模式与开发实践 》</h3><p>作者：曾探</p><p>出版时间：2015-05-01</p><p>阅读进度：正在阅读...</p><p><span>读书笔记：</span><a href="javascript:;" target="" rel="noopener noreferrer"> 暂无 </a></p><p><span>推荐指数：</span><span></span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p></div></div><p class="description">“ 设计模式的定义：在面向对象软件设计过程中针对特定问题的简洁而优雅的解决方案。书中介绍了 JavaScript 常用的 16 种设计模式，受益良多。 ”</p></li><li><div class="info"><a href="https://www.duokan.com/book/102758" target="_blank" rel="noreferrer noopener" class="book-container"><div class="book"><img src="https://cdn.jsdelivr.net/gh/chanshiyucx/yoi@latest/book/You_Dont_Know_JavaScript(上卷).jpg" alt="你不知道的 JavaScript(上卷)"></div></a><div><h3>《 你不知道的 JavaScript(上卷) 》</h3><p>作者：Kyle Simpson</p><p>出版时间：2015-04-01</p><p>阅读进度：正在阅读...</p><p><span>读书笔记：</span><a href="javascript:;" target="" rel="noopener noreferrer">暂无</a></p><p><span>推荐指数：</span><span></span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p></div></div><p class="description">“ You-Dont-Know-JS 系列目前在 Github 上已获得近 7.5 万 star，说是 2017 年最火的一个项目也不为过，学而不思则殆，重新温故知新。 ”</p></li><li><div class="info"><a href="https://www.jb51.net/onlineread/JavaScript-Garden-CN/#intro" target="_blank" rel="noreferrer noopener" class="book-container"><div class="book"><img src="https://cdn.jsdelivr.net/gh/chanshiyucx/yoi@latest/book/JavaScript-秘密花园.jpg" alt="JavaScript 秘密花园"></div></a><div><h3>《 JavaScript 秘密花园 》</h3><p>作者：伊沃·韦特泽尔</p><p>出版时间：未出版</p><p>阅读进度：温习中</p><p><span>读书笔记：</span><a href="javascript:;" target="" rel="noopener noreferrer"> 暂无 </a></p><p><span>推荐指数：</span><span></span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p></div></div><p class="description">“ JavaScript 秘密花园是一个不断更新，主要关心 JavaScript 一些古怪用法的文档。初学者可以籍此深入了解 JavaScript 的语言特性。 ”</p></li></ul></div>
+        </div>
 
+        
+
+        <div class="card">
+
+            
+
+            
+
+            
+
+            
+
+            
+            <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #ff9999;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        /* max-width: 100%; */
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+    .v[data-class=v] .vinput {
+     padding: 0px 0px;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
 </div>
-<!-- 书单模块结束 -->
+
+
+<script src="../js/Valine.min.js"></script>
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        enableQQ: true,
+        boolean: true,
+        appId: 'OlPlHTCxttomUqkRm5SmBYrk-MdYXbMMI',
+        appKey: 'c6QfYXNpgaiXYpabC2fHyqqf',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'false' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '你是我一生只会遇见一次的惊喜 ...',
+        requiredFields: ['nick','mail'], //设置必填项
+        // 设置Bilibili表情包地址
+        emojiCDN: '//i0.hdslb.com/bfs/emote/', 
+        // 表情title和图片映射
+        emojiMaps: {
+        "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
+        "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
+        "tv_偷笑": "bb690d4107620f1c15cff29509db529a73aee261.png",
+        "tv_再见": "180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png",
+        "tv_冷漠": "b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png",
+        "tv_发怒": "34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png",
+        "tv_发财": "34db290afd2963723c6eb3c4560667db7253a21a.png",
+        "tv_可爱": "9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png",
+        "tv_吐血": "09dd16a7aa59b77baa1155d47484409624470c77.png",
+        "tv_呆": "fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
+        "tv_呕吐": "9f996894a39e282ccf5e66856af49483f81870f3.png",
+        "tv_困": "241ee304e44c0af029adceb294399391e4737ef2.png",
+        "tv_坏笑": "1f0b87f731a671079842116e0991c91c2c88645a.png",
+        "tv_大佬": "093c1e2c490161aca397afc45573c877cdead616.png",
+        "tv_大哭": "23269aeb35f99daee28dda129676f6e9ea87934f.png",
+        "tv_委屈": "d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
+        "tv_害羞": "a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png",
+        "tv_尴尬": "7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
+        "tv_微笑": "70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png",
+        "tv_思考": "90cf159733e558137ed20aa04d09964436f618a1.png",
+        "tv_惊吓": "0d15c7e2ee58e935adc6a7193ee042388adc22af.png",
+        "tv_打脸": "56ab10b624063e966bfcb76ea5dc4794d87dfd47.png",
+        "tv_抓狂": "fe31c08edad661d63762b04e17b8d5ae3c71a757.png",
+        "tv_抠鼻": "c666f55e88d471e51bbd9fab9bb308110824a6eb.png",
+        "tv_斜眼笑": "911f987aa8bc1bee12d52aafe62bc41ef4474e6c.png",
+        "tv_无奈": "ea8ed89ee9878f2fece2dda0ea8a5dbfe21b5751.png",
+        "tv_晕": "5443c22b4d07fb1907ccc610c8e6db254f2461b7.png",
+        "tv_流汗": "cead1c351ab8d79e9f369605beb90148db0fbed3.png",
+        "tv_流泪": "7e71cde7858f0cd50d74b0264aa26db612a8a167.png",
+        "tv_流鼻血": "c32d39db2737f89b904ca32700d140a9241b0767.png",
+        "tv_点赞": "f85c354995bd99e28fc76c869bfe42ba6438eff4.png",
+        "tv_生气": "26702dcafdab5e8225b43ffd23c94ac1ff932654.png",
+        "tv_生病": "8b0ec90e6b86771092a498c54f09fc94621c1900.png",
+        "tv_疑问": "0793d949b18d7be716078349c202c15ff166f314.png",
+        "tv_白眼": "c1d59f439e379ee50eef488bcb5e5378e5044ea4.png",
+        "tv_皱眉": "72ccad6679fea0d14cce648b4d818e09b8ffea2d.png",
+        "tv_目瞪口呆": "0b8cb81a68de5d5365212c99375e7ace3e7891b7.png",
+        "tv_睡着": "8b196675b53af58264f383c50ad0945048290b33.png",
+        "tv_笑哭": "1abc628f6d4f4caf9d0e7800878f4697abbc8273.png",
+        "tv_腼腆": "89712c0d4af73e67f89e35cbc518420380a7f6f4.png",
+        "tv_色": "61822c7e9aae5da76475e7892534545336b23a6f.png",
+        "tv_调侃": "4bc022533ef31544ca0d72c12c808cf4a1cce3e3.png",
+        "tv_调皮": "b9c41de8e82dd7a8515ae5e3cb63e898bf245186.png",
+        "tv_鄙视": "6e72339f346a692a495b123174b49e4e8e781303.png",
+        "tv_闭嘴": "c9e990da7f6e93975e25fd8b70e2e290aa4086ef.png",
+        "tv_难过": "87f46748d3f142ebc6586ff58860d0e2fc8263ba.png",
+        "tv_馋": "fc7e829b845c43c623c8b490ee3602b7f0e76a31.png",
+        "tv_鬼脸": "0ffbbddf8a94d124ca2f54b360bbc04feb6bbfea.png",
+        "tv_黑人问号": "45821a01f51bc867da9edbaa2e070410819a95b2.png",
+        "tv_鼓掌": "1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png"
+            // ... 更多表情
+        }
+    });
+
+    document.body.addEventListener('click', function(e) {
+    if (e.target.classList.contains('vsubmit')) {
+        const email = document.querySelector('input[type=email]');
+        const nick = document.querySelector('input[name=nick]');
+        const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if (!email.value || !nick.value || !reg.test(email.value)) {
+            const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+            const vmark = document.querySelector('.vmark');
+            vmark.innerHTML = str;
+            vmark.style.display = 'block';
+
+            setTimeout(function() {
+                vmark.style.display = 'none';
+                vmark.innerHTML = '';
+            }, 2500);
+        }
+      }
+    });
+
+</script>
+
+
+            
+
+        </div>
+    </div>
+</main>
+
+<script>
+    $(function () {
+        $('#friends-link').masonry({
+            itemSelector: '.friend-div'
+        });
+    });
+</script>
+
 
     <footer class="page-footer bg-color">
     
