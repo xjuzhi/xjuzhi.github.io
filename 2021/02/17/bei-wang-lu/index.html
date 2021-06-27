@@ -533,6 +533,19 @@
 <div class="dengl"></div>
 引入灯笼结束 -->
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -689,7 +702,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-17
+                    2021-06-27
                 </div>
                 
 
@@ -902,6 +915,7 @@
 <h2 id="2月26日"><a href="#2月26日" class="headerlink" title="2月26日"></a>2月26日</h2><p>发现bug页脚消失，一分钟后找到bug透明度问题</p>
 <h2 id="3月16日"><a href="#3月16日" class="headerlink" title="3月16日"></a>3月16日</h2><p>修改了书单界面</p>
 <h2 id="3月17日"><a href="#3月17日" class="headerlink" title="3月17日"></a>3月17日</h2><p>书单界面更新完成</p>
+<h2 id="6月27日"><a href="#6月27日" class="headerlink" title="6月27日"></a>6月27日</h2><p>更新日记</p>
 
                 
             </div>
@@ -1790,7 +1804,7 @@ body.dark .ipage {
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3k</span>&nbsp;字
+                class="white-color">3.2k</span>&nbsp;字
             
             
             
